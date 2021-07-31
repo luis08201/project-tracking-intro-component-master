@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+$red: #ff5c5c;
+$verydarkblue: #242942;
+$darkgrayishblue: #5b5f71;
+$grayishblue: #a0a1ac;
+$lightgrayishblue: #eef3f6;
+$gris: #eef3f6;
+$barlow-condensed: "Barlow Condensed", sans-serif;
+$barlow: "Barlow", sans-serif;
+
+body {
+  overflow: hidden;
+  font-family: $barlow;
+}
+.main__header {
+  position: relative;
+  padding: 0 10px;
+
+  .sombra {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50vh;
+    background-color: $gris;
+    border-bottom-left-radius: 50px;
+    z-index: -1;
+
+    @media screen and (max-width: 500px) {
+      height: 40vh;
+    }
+    @media screen and (max-width: 375px) {
+      height: 39vh;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 30px;
+  }
+}
+
+.submain__header {
+  margin: 0 auto;
+  max-width: 1090px;
+  padding: 37px 4px 0;
+  display: flex;
+  justify-content: space-between;
+  font-family: $barlow-condensed;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 768px) {
+      display: none;
+      &.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        left: 10%;
+        right: 10%;
+        z-index: 9999;
+        width: 80%;
+        top: 10vh;
+        background-color: #fff;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.404);
+        border-radius: 5px;
+      }
+    }
+  }
+  .navList {
+    list-style: none;
+    &:nth-of-type(4) .navLink {
+      color: $grayishblue;
+      margin-left: 4vw;
+      padding-right: 0;
+    }
+    @media screen and (max-width: 768px) {
+      padding: 16px 0;
+      width: 90%;
+      text-align: center;
+
+      &:nth-of-type(4) {
+        border-top: 1px solid $grayishblue;
+        padding: 25px 0;
+      }
+
+      &:nth-of-type(4) .navLink {
+        margin-left: 0;
+      }
+    }
+  }
+  .navLink {
+    padding: 0 23px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $verydarkblue;
+    font-weight: 700;
+    &:hover {
+      text-decoration: underline;
+    }
+    @media screen and (max-width: 768px) {
+      padding: 0;
+    }
+  }
+  .menuToggle {
+    display: none;
+    @media screen and (max-width: 768px) {
+      display: block;
+      background-image: url(../img/icon-hamburger.svg);
+      background-repeat: no-repeat;
+      background-size: 25px;
+      width: 25px;
+      height: 25px;
+      align-self: center;
+
+      &.active {
+        background-image: url(../img/icon-close.svg);
+        background-repeat: no-repeat;
+        background-size: 25px;
+        width: 25px;
+        height: 25px;
+        align-self: center;
+      }
+    }
+  }
+}
+.main__page {
+  display: flex;
+  width: 100%;
+  position: relative;
+  height: 100vh;
+
+  .page__img {
+    position: absolute;
+    right: -18%;
+    top: 10%;
+    width: 70%;
+    height: 70vh;
+    z-index: 2;
+    @media screen and (max-width: 768px) {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: auto;
+      top: 9%;
+    }
+  }
+  .page__article {
+    width: 50%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    @media screen and (max-width: 768px) {
+      margin-top: 90px;
+      width: 100%;
+      padding: 0 20px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    height: auto;
+  }
+}
+
+.subpage__article {
+  width: 500px;
+
+  .page__subheading {
+    font-size: 10.72px;
+    letter-spacing: 3px;
+    margin: 13.66px 0;
+    color: $grayishblue;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .page__span {
+    background-color: #000;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 9px;
+  }
+  .page__heading {
+    text-transform: uppercase;
+    font-family: $barlow-condensed;
+    font-size: 40px;
+    font-weight: 700;
+    color: $verydarkblue;
+  }
+  .page__paragraph {
+    font-family: $barlow;
+    font-size: 15.2px;
+    color: $darkgrayishblue;
+    font-weight: 400;
+    margin: 26.62px 0 53.24px;
+    @media screen and (max-width: 768px) {
+      margin: 26.62px 0 33.24px;
+    }
+  }
+  .page__boton {
+    font-family: $barlow;
+    font-size: 11.2px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin: 0 15px 0 0;
+    color: $grayishblue;
+    text-transform: uppercase;
+  }
+  .page__btn {
+    background-color: $red;
+    color: #fff;
+    font-family: $barlow-condensed;
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding: 10px 25px;
+    font-weight: 700;
+    border: none;
+    text-transform: uppercase;
+  }
+  br{
+      @media screen and (max-width:768px) {
+          display: none;
+      }
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}

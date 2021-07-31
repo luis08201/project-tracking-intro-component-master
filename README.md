@@ -1,0 +1,1 @@
+Haciendo el sexto ejercicio de Frontend-Mentor y mi primera prueba usando SASS.

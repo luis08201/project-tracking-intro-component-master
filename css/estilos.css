@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  font-family: "Barlow", sans-serif;
+}
+
+.main__header {
+  position: relative;
+  padding: 0 10px;
+}
+
+.main__header .sombra {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 50vh;
+  background-color: #eef3f6;
+  border-bottom-left-radius: 50px;
+  z-index: -1;
+}
+
+@media screen and (max-width: 500px) {
+  .main__header .sombra {
+    height: 40vh;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .main__header .sombra {
+    height: 39vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main__header {
+    margin-bottom: 30px;
+  }
+}
+
+.submain__header {
+  margin: 0 auto;
+  max-width: 1090px;
+  padding: 37px 4px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.submain__header .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .submain__header .navbar {
+    display: none;
+  }
+  .submain__header .navbar.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    z-index: 9999;
+    width: 80%;
+    top: 10vh;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.404);
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.404);
+    border-radius: 5px;
+  }
+}
+
+.submain__header .navList {
+  list-style: none;
+}
+
+.submain__header .navList:nth-of-type(4) .navLink {
+  color: #a0a1ac;
+  margin-left: 4vw;
+  padding-right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .submain__header .navList {
+    padding: 16px 0;
+    width: 90%;
+    text-align: center;
+  }
+  .submain__header .navList:nth-of-type(4) {
+    border-top: 1px solid #a0a1ac;
+    padding: 25px 0;
+  }
+  .submain__header .navList:nth-of-type(4) .navLink {
+    margin-left: 0;
+  }
+}
+
+.submain__header .navLink {
+  padding: 0 23px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #242942;
+  font-weight: 700;
+}
+
+.submain__header .navLink:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .submain__header .navLink {
+    padding: 0;
+  }
+}
+
+.submain__header .menuToggle {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .submain__header .menuToggle {
+    display: block;
+    background-image: url(../img/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    width: 25px;
+    height: 25px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .submain__header .menuToggle.active {
+    background-image: url(../img/icon-close.svg);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    width: 25px;
+    height: 25px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+.main__page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  position: relative;
+  height: 100vh;
+}
+
+.main__page .page__img {
+  position: absolute;
+  right: -18%;
+  top: 10%;
+  width: 70%;
+  height: 70vh;
+  z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+  .main__page .page__img {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 9%;
+  }
+}
+
+.main__page .page__article {
+  width: 50%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .main__page .page__article {
+    margin-top: 90px;
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main__page {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: auto;
+  }
+}
+
+.subpage__article {
+  width: 500px;
+}
+
+.subpage__article .page__subheading {
+  font-size: 10.72px;
+  letter-spacing: 3px;
+  margin: 13.66px 0;
+  color: #a0a1ac;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.subpage__article .page__span {
+  background-color: #000;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 9px;
+}
+
+.subpage__article .page__heading {
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #242942;
+}
+
+.subpage__article .page__paragraph {
+  font-family: "Barlow", sans-serif;
+  font-size: 15.2px;
+  color: #5b5f71;
+  font-weight: 400;
+  margin: 26.62px 0 53.24px;
+}
+
+@media screen and (max-width: 768px) {
+  .subpage__article .page__paragraph {
+    margin: 26.62px 0 33.24px;
+  }
+}
+
+.subpage__article .page__boton {
+  font-family: "Barlow", sans-serif;
+  font-size: 11.2px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  margin: 0 15px 0 0;
+  color: #a0a1ac;
+  text-transform: uppercase;
+}
+
+.subpage__article .page__btn {
+  background-color: #ff5c5c;
+  color: #fff;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+  padding: 10px 25px;
+  font-weight: 700;
+  border: none;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .subpage__article br {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .subpage__article {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=estilos.css.map */
